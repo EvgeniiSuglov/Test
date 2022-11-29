@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "76b0bc9c-c574-4643-bbbc-2e84e45c091d",
+		"name": "API-запросы Дом питомца",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24188367"
+	},
+	"item": [
+		{
+			"name": "/species",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "csrftoken=y5vDHO4elOLkCDLLnWRjMgWocE24cTfi7cilRxE9o1YdCSZXYkREQrZSJChSVz2w",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://130.193.37.179/app/pets",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{baseURL}}/api/species/",
+					"protocol": "http",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"species",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/breed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+						"type": "text"
+					},
+					{
+						"key": "Cookie",
+						"value": "csrftoken=y5vDHO4elOLkCDLLnWRjMgWocE24cTfi7cilRxE9o1YdCSZXYkREQrZSJChSVz2w",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "http://130.193.37.179/app/pets",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{baseURL}}/api/breed/",
+					"protocol": "http",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"breed",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/sites",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{baseURL}}/api/pet/?page=1&page_size=6",
+					"protocol": "http",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/gender",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{baseURL}}/api/gender/",
+					"protocol": "http",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"gender",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "130.193.37.179",
+			"type": "string"
+		}
+	]
+}
